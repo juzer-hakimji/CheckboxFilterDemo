@@ -1,0 +1,23 @@
+<p>Brands</p>
+<div *ngFor="let brand of ProductData.Brands">
+  <input type="checkbox" name="BrandList" [value]="brand.BrandName" (change)="OnChange($event)" [(ngModel)]="brand.Checked">{{ brand.BrandName }}
+</div>
+<br />
+<p>Operating systems</p>
+<div *ngFor="let os of ProductData.OperatingSystems">
+  <input type="checkbox" name="OSList" [value]="os.OSName" (change)="OnChange($event)" [(ngModel)]="os.Checked">{{ os.OSName }}
+</div>
+<br />
+<p>Network Types</p>
+<div *ngFor="let network of ProductData.NetworkTypes">
+  <input type="checkbox" name="NetworkList" [value]="network.NetworkType" (change)="OnChange($event)" [(ngModel)]="network.Checked">{{ network.NetworkType }}
+</div>
+<br />
+<br />
+<div *ngFor="let product of DisplayProductList">
+  <label>{{ product.price }}</label> --->
+  <label>{{ product.Name }}</label> --->
+  <label>{{ product.BrandName }}</label> --->
+  <label>{{ product.OSName }}</label> --->
+  <label>{{ product.NetworkType }}</label>
+</div>
